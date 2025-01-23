@@ -40,3 +40,120 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Style global de la page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #FF7F50, #FF1493, #8A2BE2); /* Dégradé de fond */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Style du titre principal */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* Style de la grille */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin: 50px;
+}
+
+/* Conteneur pour centrer tout l'ensemble de la page */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Style des cases du Morpion */
+.cell {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #FF8C00, #FF6347, #FFD700); /* Dégradé de couleur pour les cellules */
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #fff;
+}
+
+.cell:hover {
+  background: linear-gradient(45deg, #32CD32, #3CB371, #8B4513);
+  transform: scale(1.1);
+}
+
+/* Bouton de "replay" dans l'historique */
+button {
+  background-color: #FF1493;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #FF69B4;
+}
+
+/* Liste de l'historique des parties */
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* Style de l'en-tête */
+header {
+  margin-bottom: 40px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;  /* Limite la largeur de l'en-tête pour qu'il s'aligne avec les autres sections */
+  margin-top: 20px;
+}
+
+/* Style des cases vides */
+.cell:empty {
+  background: linear-gradient(45deg, #FFD700, #FF8C00, #FF6347);
+}
+
